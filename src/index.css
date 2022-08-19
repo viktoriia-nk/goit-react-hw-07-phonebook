@@ -48,6 +48,8 @@ p {
   border-radius: 15px;
   box-shadow: 10px 15px 15px #2b385e;
   background-color: #a9befa;
+  padding-left: 20px;
+    padding-right: 20px;
 }
 
 .contactsTitle {

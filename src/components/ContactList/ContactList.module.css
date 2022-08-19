@@ -8,8 +8,8 @@
 
 .contItem {
     display: flex;
-    justify-content: space-around;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .contItem:not(:last-child) {

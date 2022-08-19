@@ -1,5 +1,5 @@
 import s from './ContactList.module.css';
-import {deleteContact} from '../../redux/contacts/actions';
+import {deleteContactOperation} from '../../redux/contacts/operations';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ContactList = () => {
@@ -7,6 +7,7 @@ const ContactList = () => {
   const contacts = useSelector(state=>state.contacts.items)
   const filter = useSelector(state => state.contacts.filter);
 
+// console.log(contacts);
 
   const searchFilter = () => {
     const normalized = filter.toLowerCase().trim();
@@ -14,6 +15,7 @@ const ContactList = () => {
       contact.name.toLowerCase().includes(normalized)
     );
   };
+
 
   return (
     <ul className={s.contList}>
@@ -25,7 +27,7 @@ const ContactList = () => {
           <button
             type="button"
             className={s.contBtn}
-            onClick={() => dispatch(deleteContact(cont.id))}
+            onClick={() => dispatch(deleteContactOperation(cont.id))}
           >
             Delete
           </button>
